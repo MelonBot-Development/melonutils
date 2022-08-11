@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import io, os, re, aiohttp, asyncio, logging
+import asyncio
 from time import time_lib
 from datetime import datetime
 from typing import TYPE_CHECKING, TypeVar, Callable, Awaitable, Union, Any, Optional, Tuple
@@ -17,16 +17,15 @@ from .exceptions import *
     
 T = TypeVar("T")
 P = ParamSpec("P")
-BE = TypeVar("BE", bound="discord.guild.BanEntry")
-
-CDN = re.complite(
-    r'(https?://)?(media|cdn)\.discord(app)?\.(com|net)/attachments/'
-    r'(?P<channel_id>[0-9]+)/(?P<message_id>[0-9]+)/(?P<filename>[\S]+)'
-)
-URL_REGEX = re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*(),]|%[0-9a-fA-F][0-9a-fA-F])+')
 
 __all__: Tuple[str, ...] = (
-    ""
+    "ascii_color",
+    "markdown_remove",
+    "codeblock_wrapper",
+    "safe_reason",
+    "format_date",
+    "add_logging",
+    "can_execute_action",
 )
 
 def ascii_color(color=None, /, *, fmt=0, bg=False) -> str:
