@@ -1,6 +1,6 @@
 import pathlib
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 ROOT = pathlib.Path(__file__).parent
 
@@ -24,7 +24,7 @@ setup(
     },
     author="Lemon Rose",
     author_email="support@melonbot.io",
-    packages=find_packages(),
+    packages=["melonutils", "melonutils.core"],
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
         "License :: OSI Approved :: MIT License",
