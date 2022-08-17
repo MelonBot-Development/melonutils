@@ -9,7 +9,7 @@ with open(ROOT / "README.md", "r", encoding="utf-8") as f:
     
 setup(
     name="melonutils",
-    version="0.1.0",
+    version="0.1.3",
     # if you want a cleaner versioning use the things below
     # setup_requires=['setuptools_scm'],
     # intall_requires=['setuptools_scm'],
