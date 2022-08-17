@@ -19,7 +19,7 @@ class VersionInfo(NamedTuple):
     releaselevel: Literal["alpha", "beta", "candidate", "final"]
     serial: int
     
-version_info: VersionInfo = VersionInfo(major=0, minor=1, micro=1, releaselevel="alpha", serial=0)
+version_info: VersionInfo = VersionInfo(major=0, minor=1, micro=2, releaselevel="alpha", serial=0)
 
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)
 __author__ = 'Lemon Rose (japandotorg)'
