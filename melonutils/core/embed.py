@@ -48,7 +48,7 @@ class Embed(DPYEMBED):
         self._thumbnail: ImageObject = thumbnail if isinstance(thumbnail, ImageObject) else ImageObject.fromDict(thumbnail)
         self._image: ImageObject = image if isinstance(image, ImageObject) else ImageObject.fromDict(image)
         self._provider: ProviderObject = provider if isinstance(provider, ProviderObject) else ProviderObject.fromDict(provider)
-        self._fields: Fields.fromDict(fields)
+        self._fields: Fields = Fields.fromDict(fields)
         
     @property
     def title(self) -> str:
